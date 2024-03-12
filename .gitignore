@@ -2,3 +2,12 @@
 dpf2.py
 dbapp backup.py
 diabAppbackup2.py
+SVC_model.pkl
+adaboost_model.pkl
+decision_tree_model.pkl
+knn_model.pkl
+logistic_regression_model.pkl
+naive_bayes_model.pkl
+random_forest_model.pkl
+standard_scaler.pkl
+xg_model.pkl
