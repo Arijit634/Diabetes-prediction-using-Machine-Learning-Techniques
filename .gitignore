@@ -9,5 +9,7 @@ knn_model.pkl
 logistic_regression_model.pkl
 naive_bayes_model.pkl
 random_forest_model.pkl
-standard_scaler.pkl
 xg_model.pkl
+diabmodel.ipynb
+diabmodel2.ipynb
+diabmodel3.ipynb

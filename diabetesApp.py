@@ -142,7 +142,7 @@ input_df = user_input_features()
 scaled_input_df = scale_user_input(input_df, scaler)
 
 # Reads in saved classification model
-load_clf = pickle.load(open('SVC_model.pkl', 'rb'))
+load_clf = pickle.load(open('SVC_KNN.pkl', 'rb'))
 
 # Use the model to make predictions
 prediction = load_clf.predict(scaled_input_df)
