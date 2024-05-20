@@ -238,6 +238,7 @@ else:
 st.write("Below are features used to predict the prediction")
 st.write("""
 #### Features and Description
+- **Pregnancies:** Number of times pregnant. Reflects the pregnancy history of the patient.
 - **Glucose:** Plasma glucose concentration after a 2-hour oral glucose tolerance test (OGTT) in mg/dl. Reflects how well the body processes glucose.
   - **Normal Range:**
     - 2-hour post-OGTT: Less than 140 mg/dL
