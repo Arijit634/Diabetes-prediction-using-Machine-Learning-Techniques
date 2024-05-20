@@ -10,6 +10,7 @@ Diabetes is a chronic disease that affects millions of people worldwide. Early d
 
 The features used in this prediction system include:
 
+- **Pregnancies:** Number of times pregnant. Reflects the pregnancy history of the patient.
 - **Glucose:** Plasma glucose concentration measured 2 hours after an oral glucose tolerance test.
 - **BloodPressure:** Diastolic blood pressure (mm Hg).
 - **SkinThickness:** Triceps skinfold thickness (mm).
@@ -42,11 +43,11 @@ The dataset used for training the model is loaded from a CSV file (`diabetes - D
 - Standardization of features is performed using `StandardScaler`.
 - Class imbalance is addressed using Random Over Sampling.
 
-Two classifiers, Support Vector Machine (SVM) and K-Nearest Neighbors (KNN), are trained separately and combined into an ensemble model using Voting Classifier.
+Custom implementation of two classifiers, Gradient Bossting (GB) and K-Nearest Neighbors (KNN), are trained separately and combined into an ensemble model using a custom Voting Classifier.
 
 ## Running the Application
 
-The main application (`diabetesApp.py`) is built using Streamlit. Users can input patient details through the sidebar and get predictions on whether the patient is likely to have diabetes or not. The application loads the trained model (`SVC_KNN.pkl`) and the scaler (`standard_scaler.pkl`) to make predictions based on user input.
+The main application (`diabetesApp.py`) is built using Streamlit. Users can input patient details through the sidebar and get predictions on whether the patient is likely to have diabetes or not. The application loads the trained model and the scaler to make predictions based on user input.
 
 ## Usage
 
