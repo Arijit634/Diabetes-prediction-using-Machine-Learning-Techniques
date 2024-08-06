@@ -151,10 +151,8 @@ def calculate_diabetes_pedigree(has_diabetic_relatives):
             except ValueError:
                 st.sidebar.warning("Invalid input format. Please enter 'relationship,age' for each relative without diabetes.")
 
-    numerator_sum = 0
-    denominator_sum = 0
-    diabetes_pedigree = (numerator_sum + 20) / (denominator_sum + 50)
-    dpf_value = round(diabetes_pedigree, 3)
+    numerator_sum = 0.0  # Initialize as float
+    denominator_sum = 0.0  # Initialize as float
 
     for relative_type, age in relatives_with_diabetes:
         shared_genes = get_shared_genes(relative_type)
@@ -164,9 +162,13 @@ def calculate_diabetes_pedigree(has_diabetic_relatives):
         shared_genes = get_shared_genes(relative_type)
         denominator_sum += shared_genes * (age - 14)
 
-    diabetes_pedigree = (numerator_sum + 20) / (denominator_sum + 50)
-    dpf_value = round(diabetes_pedigree, 3)
+    # Prevent division by zero
+    if denominator_sum == 0:
+        diabetes_pedigree = 0.078 # Default value when no relatives without diabetes are entered
+    else:
+        diabetes_pedigree = (numerator_sum + 20) / (denominator_sum + 50)
 
+    dpf_value = round(diabetes_pedigree, 3)
     st.sidebar.write(f"Diabetes Pedigree Function (DPF) value: {dpf_value}")
     return dpf_value
 
