@@ -285,3 +285,5 @@ These ranges and insights were obtained from the Pima Indians Diabetes Dataset s
 - **Half-Aunt/Half-Uncle:** Shares genes with you, but the genetic influence is less (0.125).
 - **Cousin:** Genetic influence is present but minimal (0.125).
 """)
+import sklearn
+print(sklearn.__version__)
